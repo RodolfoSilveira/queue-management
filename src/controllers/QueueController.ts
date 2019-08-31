@@ -28,7 +28,11 @@ class QueueController {
   }
 
   public filterLine (req: Request, res: Response): Response {
-    return res.send()
+    const { genre } = req.query
+    const queue = Queue
+    const users = queue.printGenre(genre)
+
+    return res.send({ users })
   }
 
   public popLine (req: Request, res: Response): Response {

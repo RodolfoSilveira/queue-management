@@ -33,3 +33,17 @@ Example
 4. popLine
   Method
     -GET
+5. findPosition
+  Method
+    -POST
+  Body
+    -email
+6. filterLine
+  Method
+    -GET
+  QueryParams
+    -genre
+
+Comments
+
+use Postman or Insomnia for request testing and data visualization

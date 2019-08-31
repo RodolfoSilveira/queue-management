@@ -13,28 +13,32 @@ class Queue {
     return this.items.map((e: any, i:number): number => i)
   }
 
-  public dequeue (): any {
+  public dequeue (): string {
     return this.items.shift()
   }
 
-  public front (): any {
+  public front (): string {
     return this.items[0]
   }
 
-  public isEmpty (): any {
+  public isEmpty (): boolean {
     return this.items.length === 0
   }
 
-  public size (): any {
+  public size (): number {
     return this.items.length
   }
 
   public printEmail (email: string): any {
-    return this.items.findIndex(e => e.email === email)
+    return this.items.indexOf(email)
   }
 
-  public print (): any {
+  public print (): string {
     return this.items.toString()
+  }
+
+  public printGenre (genre: string): any {
+    return this.items.map(e => e === genre)
   }
 }
 
